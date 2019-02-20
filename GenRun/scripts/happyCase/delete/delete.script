@@ -1,0 +1,60 @@
+run rm images/actual/happyCase/inputs401k.png
+run rm images/actual/happyCase/outputs401k.png
+run rm images/actual/happyCase/outputs401k2.png
+
+run rm images/actual/happyCase/inputs403b.png
+run rm images/actual/happyCase/outputs403b.png
+run rm images/actual/happyCase/outputs403b2.png
+
+run rm images/actual/happyCase/inputsBrokerage.png
+run rm images/actual/happyCase/outputsBrokerage.png
+run rm images/actual/happyCase/outputsBrokerage2.png
+
+run rm images/actual/happyCase/inputsCashBalance.png
+run rm images/actual/happyCase/outputsCashBalance.png
+run rm images/actual/happyCase/outputsCashBalance2.png
+
+run rm images/actual/happyCase/inputsDeductions.png
+run rm images/actual/happyCase/outputsDeductions.png
+run rm images/actual/happyCase/outputsDeductions2.png
+
+run rm images/actual/happyCase/inputsExpenses.png
+run rm images/actual/happyCase/outputsExpenses.png
+run rm images/actual/happyCase/outputsExpenses2.png
+
+run rm images/actual/happyCase/outputsIncomeGraph.png
+
+run rm images/actual/happyCase/inputsIra.png
+run rm images/actual/happyCase/outputsIra.png
+run rm images/actual/happyCase/outputsIra2.png
+
+run rm images/actual/happyCase/inputsPension.png
+run rm images/actual/happyCase/outputsPension.png
+run rm images/actual/happyCase/outputsPension2.png
+
+run rm images/actual/happyCase/inputsRoth.png
+run rm images/actual/happyCase/outputsRoth.png
+run rm images/actual/happyCase/outputsRoth2.png
+
+run rm images/actual/happyCase/inputsSalary.png
+run rm images/actual/happyCase/outputsSalary.png
+run rm images/actual/happyCase/outputsSalary2.png
+
+run rm images/actual/happyCase/inputsSavings.png
+run rm images/actual/happyCase/outputsSavings.png
+run rm images/actual/happyCase/outputsSavings2.png
+
+run rm images/actual/happyCase/inputsSocialSecurity.png
+run rm images/actual/happyCase/outputsSocialSecurity.png
+run rm images/actual/happyCase/outputsSocialSecurity2.png
+
+run rm images/actual/happyCase/inputsTaxes.png
+run rm images/actual/happyCase/outputsTaxes.png
+run rm images/actual/happyCase/outputsTaxes2.png
+
+run rm images/actual/happyCase/demo.xml
+
+run rm images/actual/happyCase/temp.xml
+
+run rm images/actual/happyCase/demo0000000000.pdf
+

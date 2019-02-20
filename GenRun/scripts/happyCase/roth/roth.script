@@ -1,0 +1,52 @@
+#
+# Move to input Roth tab
+#
+mouseMoved inputRothTab
+#
+# Click on tab
+#
+mouseClicked 1
+#
+# Move to output Roth tab
+#
+mouseMoved outputRothTab
+#
+# Click on tab
+#
+mouseClicked 1
+#
+# Screen Capture
+#
+captureFile   happyCase/inputsRoth
+screenCapture captureInputEntries
+#
+# Delay some time to allow system to write the file
+#
+delay captureWait
+#
+# Screen Capture
+#
+captureFile   happyCase/outputsRoth
+screenCapture captureOutputTextArea
+#
+# Delay some time to allow system to write the file
+#
+delay captureWait
+#
+# Move to an empty area below the output scroll bar
+#
+mouseMoved outputScrollBarEmptyArea
+#
+# Click on tab
+#
+mouseClicked 1
+#
+# Screen Capture
+#
+captureFile   happyCase/outputsRoth2
+screenCapture captureOutputTextArea
+#
+# Delay some time to allow system to write the file
+#
+delay captureWait
+

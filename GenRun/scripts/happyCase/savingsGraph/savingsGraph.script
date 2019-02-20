@@ -1,0 +1,23 @@
+#
+# Move to output Income Graph tab
+#
+mouseMoved outputSavingsGraphTab
+#
+# Click on tab
+#
+mouseClicked 1
+#
+# Delay some time to allow the graph to be generated
+#
+delay captureWait
+delay captureWait
+#
+# Screen Capture
+#
+captureFile   happyCase/outputsSavingsGraph
+screenCapture captureOutputTextArea
+#
+# Delay some time to allow system to write the file
+#
+delay captureWait
+

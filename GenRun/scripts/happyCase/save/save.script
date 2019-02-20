@@ -1,0 +1,152 @@
+#
+# Move to input 401k tab
+#
+mouseMoved input401kTab
+#
+# Click on tab
+#
+mouseClicked 1
+#
+# Move to filename dialog menu
+#
+mouseMoved entry401kGrowthRate
+#
+# Click on field
+#
+mouseClicked 1
+delay captureWait
+#
+# Press/Release the BACKSPACE button 4 times.
+# The codes can be determined by googling "java api 8 doc keyevent"
+#     and then click on "Field" in the table.
+#
+keyPressed  8
+keyReleased 8
+keyPressed  8
+keyReleased 8
+keyPressed  8
+keyReleased 8
+keyPressed  8
+keyReleased 8
+#
+# Press/Release the '0' button
+#
+keyPressed  48
+keyReleased 48
+#
+# Press/Release the '.' button
+#
+keyPressed  46
+keyReleased 46
+#
+# Press/Release the '0' button
+#
+keyPressed  48
+keyReleased 48
+#
+# Press/Release the SHIFT button & then the '%' key
+#
+keyPressed  16
+keyPressed  53
+keyReleased 53
+keyReleased 16
+#
+# Press/Release the ENTER button
+#
+keyPressed  10
+keyReleased 10
+#
+# Delay some time to allow system to write the output.
+#
+delay captureWait
+#
+# Move to Inputs menu
+#
+mouseMoved menuInputs
+#
+# Click on tab
+#
+mouseClicked 1
+#
+# Move to "Inputs/Save" menu
+#
+mouseMoved menuInputsSave
+#
+# Click on tab
+#
+mouseClicked 1
+delay captureWait
+#
+# Copy the generated file to images/actual/happyCase/demo.xml 
+#
+run cp input_xmls/demo.xml images/actual/happyCase/demo.xml 
+#
+# Move to 401k Growth Rate (Restore the input)
+#
+mouseMoved entry401kGrowthRate
+#
+# Click on field
+#
+mouseClicked 1
+#
+# Press/Release the BACKSPACE button 4 times.
+# The codes can be determined by googling "java api 8 doc keyevent"
+#     and then click on "Field" in the table.
+#
+keyPressed  8
+keyReleased 8
+keyPressed  8
+keyReleased 8
+keyPressed  8
+keyReleased 8
+keyPressed  8
+keyReleased 8
+#
+# Press/Release the '4' button
+#
+keyPressed  52
+keyReleased 52
+#
+# Press/Release the '.' button
+#
+keyPressed  46
+keyReleased 46
+#
+# Press/Release the '0' button
+#
+keyPressed  48
+keyReleased 48
+#
+# Press/Release the SHIFT button & then the '%' key
+#
+keyPressed  16
+keyPressed  53
+keyReleased 53
+keyReleased 16
+#
+# Press/Release the ENTER button
+#
+keyPressed  10
+keyReleased 10
+#
+# Delay some time to allow system to write the output.
+#
+delay captureWait
+#
+# Move to Inputs menu
+#
+mouseMoved menuInputs
+#
+# Click on tab
+#
+mouseClicked 1
+#
+# Move to "Inputs/Save" menu
+#
+mouseMoved menuInputsSave
+#
+# Click on tab
+#
+mouseClicked 1
+delay captureWait
+

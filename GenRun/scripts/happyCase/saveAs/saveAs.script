@@ -1,0 +1,79 @@
+#
+# Move to Inputs menu
+#
+mouseMoved menuInputs
+#
+# Click on tab
+#
+mouseClicked 1
+#
+# Move to "Inputs/Save As" menu
+#
+mouseMoved menuInputsSaveAs
+#
+# Click on tab
+#
+mouseClicked 1
+#
+# Move to filename dialog menu
+#
+mouseMoved entryMenuSaveAsFilename
+#
+# Press/Release the 't' button.
+# The codes can be determined by googling "java api 8 doc keyevent"
+#     and then click on "Field" in the table.
+#
+keyPressed  84
+keyReleased 84
+#
+# Press/Release the 'e' button
+#
+keyPressed  69
+keyReleased 69
+#
+# Press/Release the 'm' button
+#
+keyPressed  77
+keyReleased 77
+#
+# Press/Release the 'p' button
+#
+keyPressed  80
+keyReleased 80
+#
+# Press/Release the '.' button
+#
+keyPressed  46
+keyReleased 46
+#
+# Press/Release the 'x' button
+#
+keyPressed  88
+keyReleased 88
+#
+# Press/Release the 'm' button
+#
+keyPressed  77
+keyReleased 77
+#
+# Press/Release the 'l' button
+#
+keyPressed  76
+keyReleased 76
+#
+# Move to "Open" button
+#
+mouseMoved entryMenuSaveAsFilenameOpen
+#
+# Click on button
+#
+mouseClicked 1
+#
+# Delay some time to allow system to write the file
+#
+delay captureWait
+#
+# Copy the generated file to images/actual/happyCase/temp.xml 
+#
+run mv input_xmls/temp.xml images/actual/happyCase/temp.xml 
+

@@ -1,0 +1,55 @@
+#
+# Move to input Deductions tab
+#
+mouseMoved inputDeductionsTab
+#
+# Click on tab
+#
+mouseClicked 1
+delay 50
+#
+# Move to output Deductions tab
+#
+mouseMoved outputDeductionsTab
+#
+# Click on tab
+#
+mouseClicked 1
+delay 50
+#
+# Screen Capture
+#
+captureFile   happyCase/inputsDeductions
+screenCapture captureInputEntries
+#
+# Delay some time to allow system to write the file
+#
+delay captureWait
+#
+# Screen Capture
+#
+captureFile   happyCase/outputsDeductions
+screenCapture captureOutputTextArea
+#
+# Delay some time to allow system to write the file
+#
+delay captureWait
+#
+# Move to an empty area below the output scroll bar
+#
+mouseMoved outputScrollBarEmptyArea
+#
+# Click on tab
+#
+mouseClicked 1
+delay 50
+#
+# Screen Capture
+#
+captureFile   happyCase/outputsDeductions2
+screenCapture captureOutputTextArea
+#
+# Delay some time to allow system to write the file
+#
+delay captureWait
+

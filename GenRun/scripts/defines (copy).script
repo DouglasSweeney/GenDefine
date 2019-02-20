@@ -1,0 +1,47 @@
+#
+# The coordinates are from GenDefine.
+# Its easier to enter the defines by hand (with 0 for coordinates) 
+#      & then run GenDefine.
+#
+define captureInputEntries 199 282 384 316
+define captureOutputTextArea 585 151 647 517
+define entryMenuSaveAsFilename 656 479 
+define entryMenuSaveAsFilenameOpen 829 552 
+define input401kTab 237 372 
+define input403bTab 306 366 
+define inputBrokerageTab 377 373 
+define inputCashBalanceTab 507 372 
+define inputDeductionsTab 284 353 
+define inputExpensesTab 441 352 
+define inputIraTab 533 356 
+define inputPensionTab 255 336 
+define inputPersonalTab 362 334 
+define inputRothTab 459 337 
+define inputSalaryTab 536 335 
+define inputSavingsTab 245 319 
+define inputSocialSecurityTab 349 317 
+define inputTaxesTab 438 318 
+define menuFile 90 60 
+define menuFileExit 93 81 
+define menuInputs 130 61 
+define menuInputsSave 148 78 
+define menuInputsSaveAs 148 95 
+define menuPdf 186 61 
+define menuPdfCreate 189 80 
+define output401kTab 612 205 
+define output403bTab 675 202 
+define outputBrokerageTab 739 204 
+define outputCashBalanceTab 850 203 
+define outputDeductionsTab 965 199 
+define outputExpensesTab 1062 200 
+define outputIncomeGraphTab 1132 200 
+define outputIraTab 605 183 
+define outputPensionTab 667 185 
+define outputRothTab 727 185 
+define outputSalaryTab 791 185 
+define outputSavingsGraphTab 963 182 
+define outputSavingsTab 861 184 
+define outputScrollBarDownArrow 1222 619 
+define outputScrollBarEmptyArea 1219 550 
+define outputSocialSecurityTab 1065 184 
+define outputTaxesTab 1169 185 

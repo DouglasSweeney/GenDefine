@@ -1,0 +1,52 @@
+#
+# Move to input Expenses tab
+#
+mouseMoved inputExpensesTab
+#
+# Click on tab
+#
+mouseClicked 1
+#
+# Move to output Expenses tab
+#
+mouseMoved outputExpensesTab
+#
+# Click on tab
+#
+mouseClicked 1
+#
+# Screen Capture
+#
+captureFile   happyCase/inputsExpenses
+screenCapture captureInputEntries
+#
+# Delay some time to allow system to write the file
+#
+delay captureWait
+#
+# Screen Capture
+#
+captureFile   happyCase/outputsExpenses
+screenCapture captureOutputTextArea
+#
+# Delay some time to allow system to write the file
+#
+delay captureWait
+#
+# Move to an empty area below the output scroll bar
+#
+mouseMoved outputScrollBarEmptyArea
+#
+# Click on tab
+#
+mouseClicked 1
+#
+# Screen Capture
+#
+captureFile   happyCase/outputsExpenses2
+screenCapture captureOutputTextArea
+#
+# Delay some time to allow system to write the file
+#
+delay captureWait
+

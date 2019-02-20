@@ -1,0 +1,14 @@
+#
+# Testing
+#
+run java -jar Retirement.jar
+autoWaitForIdle true
+setAutoDelay 50
+#
+# Include some defines
+#
+source defines.script
+#
+# Move to input Deductions, change the deduction & capture a screenshot
+#
+source changeDeductions.script

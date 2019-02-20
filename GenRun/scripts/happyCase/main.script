@@ -1,0 +1,81 @@
+#
+# Remove files from previous run
+#
+source happyCase/delete/delete.script
+#
+# Move to 401k tab in the inputs & outputs; capture a screenshot of both
+#
+source happyCase/401k/401k.script
+#
+# Move to 403b tab in the inputs & outputs; capture a screenshot of both
+#
+source happyCase/403b/403b.script
+#
+# Move to brokerage tab in the inputs & outputs; capture a screenshot of both
+#
+source happyCase/brokerage/brokerage.script
+#
+# Move to cashBalance tab in the inputs & outputs; capture a screenshot of both
+#
+##source happyCase/cashBalance/cashBalance.script
+#
+# Move to deductions tab in the inputs & outputs; capture a screenshot of both
+#
+##source happyCase/deductions/deductions.script
+#
+# Move to expenses tab in the inputs & outputs; capture a screenshot of both
+#
+##source happyCase/expenses/expenses.script
+#
+# Move to income graph tab in the outputs; capture a screenshot
+#
+##source happyCase/incomeGraph/incomeGraph.script
+#
+# Move to ira tab in the inputs & outputs; capture a screenshot of both
+#
+##source happyCase/ira/ira.script
+#
+# Move to pension tab in the inputs & outputs; capture a screenshot of both
+#
+##source happyCase/pension/pension.script
+#
+# Move to roth ira tab in the inputs & outputs; capture a screenshot of both
+#
+##source happyCase/roth/roth.script
+#
+# Move to salary tab in the inputs & outputs; capture a screenshot of both
+#
+##source happyCase/salary/salary.script
+#
+# Move to savings tab in the inputs & outputs; capture a screenshot of both
+#
+##source happyCase/savings/savings.script
+#
+# Move to savings graph tab in the outputs; capture a screenshot
+#
+##source happyCase/savingsGraph/savingsGraph.script
+#
+# Move to Social Security tab in the inputs & outputs; capture a screenshot of both
+#
+##source happyCase/socialSecurity/socialSecurity.script
+#
+# Move to taxes tab in the inputs & outputs; capture a screenshot of both
+#
+##source happyCase/taxes/taxes.script
+#
+# Generate demo.xml file with 401k growth rate of "0.0%"
+#
+##source happyCase/save/save.script
+#
+# Generate "temp.xml" input file
+#
+##source happyCase/saveAs/saveAs.script
+#
+# Generate a pdf file
+#
+##source happyCase/pdf/pdf.script
+#
+# Compare all the screenshots to what was expected
+#
+source happyCase/compare/compare.script
+

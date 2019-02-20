@@ -1,0 +1,47 @@
+#
+# Move to PDF menu 
+#
+mouseMoved menuPdf
+#
+# Click on tab
+#
+mouseClicked 1
+#
+# Move to "Pdf/Create" menu
+#
+mouseMoved menuPdfCreate
+#
+# Click on tab
+#
+mouseClicked 1
+#
+# Delay some time to allow system to write the file
+#
+delay captureWait
+delay captureWait
+delay captureWait
+delay captureWait
+delay captureWait
+delay captureWait
+delay captureWait
+delay captureWait
+delay captureWait
+delay captureWait
+delay captureWait
+delay captureWait
+delay captureWait
+delay captureWait
+delay captureWait
+#
+# Move to filename dialog menu
+#
+mouseMoved menuPdfCreateDialogOk
+#
+# Click on tab
+#
+mouseClicked 1
+#
+# Copy the generated file to images/actual/happyCase
+#
+run mv logs/pdf/demo0000000000.pdf images/actual/happyCase 
+

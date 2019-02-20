@@ -1,0 +1,31 @@
+#
+# Use input demo.xml 
+#
+run java -Xms256m -Xmx2048m -cp . -jar Retirement.jar main.Main --scriptdir scripts scripts/main.script
+autoWaitForIdle false
+setAutoDelay 50
+#
+# Read in the defines files
+#
+source defines.script
+#
+# Capture the input/output image files
+#
+source happyCase/main.script
+#
+# Move to File menu
+#
+mouseMoved menuFile
+#
+# Click on tab
+#
+mouseClicked 1
+#
+# Move to File/Exit menu
+#
+mouseMoved menuFileExit
+#
+# Click on tab
+#
+mouseClicked 1
+

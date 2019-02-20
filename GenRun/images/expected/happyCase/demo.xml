@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TopLevel>
+
+  <Account401K name="Account401K">
+    <account401kBalance name="account401kBalance" doubleValue="354000.0"/>
+    <account401kGrowthRate name="account401kGrowthRate" doubleValue="0.0"/>
+    <account401kAnnualContributions name="account401kAnnualContributions" doubleValue="0.0"/>
+    <account401kOnlyWhileSalary name="account401kOnlyWhileSalary" booleanValue="false"/>
+    <account401kStartWithdrawalAge name="account401kStartWithdrawalAge" integerValue="58"/>
+    <account401kNumberOfWithdrawals name="account401kNumberOfWithdrawals" integerValue="12"/>
+  </Account401K>
+
+  <Account403B name="Account403B">
+    <account403BBalance name="account403BBalance" doubleValue="255000.0"/>
+    <account403BGrowthRate name="account403BGrowthRate" doubleValue="0.04"/>
+    <account403BAnnualContributions name="account403BAnnualContributions" doubleValue="0.0"/>
+    <account403BOnlyWhileSalary name="account403BOnlyWhileSalary" booleanValue="false"/>
+    <account403BStartWithdrawalAge name="account403BStartWithdrawalAge" integerValue="59"/>
+    <account403BNumberOfWithdrawals name="account403BNumberOfWithdrawals" integerValue="0"/>
+  </Account403B>
+
+  <AccountCashBalance name="AccountCashBalance">
+    <accountCashBalanceBalance name="accountCashBalanceBalance" doubleValue="105000.0"/>
+    <accountCashBalanceGrowthRate name="accountCashBalanceGrowthRate" doubleValue="0.04"/>
+    <accountCashBalanceAnnualContributions name="accountCashBalanceAnnualContributions" doubleValue="0.0"/>
+    <accountCashBalanceOnlyWhileSalary name="accountCashBalanceOnlyWhileSalary" booleanValue="false"/>
+    <accountCashBalanceStartWithdrawalAge name="accountCashBalanceStartWithdrawalAge" integerValue="59"/>
+    <accountCashBalanceNumberOfWithdrawals name="accountCashBalanceNumberOfWithdrawals" integerValue="0"/>
+  </AccountCashBalance>
+
+  <AccountIra name="AccountIra">
+    <accountIraBalance name="accountIraBalance" doubleValue="35000.0"/>
+    <accountIraGrowthRate name="accountIraGrowthRate" doubleValue="0.05"/>
+    <accountIraAnnualContributions name="accountIraAnnualContributions" doubleValue="5500.0"/>
+    <accountIraOnlyWhileSalary name="accountIraOnlyWhileSalary" booleanValue="false"/>
+    <accountIraStartWithdrawalAge name="accountIraStartWithdrawalAge" integerValue="70"/>
+    <accountIraNumberOfWithdrawals name="accountIraNumberOfWithdrawals" integerValue="0"/>
+  </AccountIra>
+
+  <AccountRoth name="AccountRoth">
+    <accountRothBalance name="accountRothBalance" doubleValue="188000.0"/>
+    <accountRothGrowthRate name="accountRothGrowthRate" doubleValue="0.05"/>
+    <accountRothAnnualContributions name="accountRothAnnualContributions" doubleValue="0.0"/>
+    <accountRothOnlyWhileSalary name="accountRothOnlyWhileSalary" booleanValue="false"/>
+    <accountRothStartWithdrawalAge name="accountRothStartWithdrawalAge" integerValue="70"/>
+    <accountRothNumberOfWithdrawals name="accountRothNumberOfWithdrawals" integerValue="0"/>
+  </AccountRoth>
+
+  <Brokerage name="Brokerage">
+    <brokerageStartingBalance name="brokerageStartingBalance" doubleValue="24000.0"/>
+    <brokerageGrowthRate name="brokerageGrowthRate" doubleValue="0.04"/>
+  </Brokerage>
+
+  <Deductions name="Deductions">
+    <currentDeductions name="currentDeductions" doubleValue="6500.0"/>
+  </Deductions>
+
+  <Expenses name="Expenses">
+    <currentExpenses name="currentExpenses" doubleValue="40000.0"/>
+  </Expenses>
+
+  <Pension name="Pension">
+    <pensionStartAge name="pensionStartAge" integerValue="55"/>
+    <pensionMonthlyAmount name="pensionMonthlyAmount" doubleValue="1760.0"/>
+    <pensionInflationAdjusted name="pensionInflationAdjusted" booleanValue="false"/>
+  </Pension>
+
+  <Personal name="Personal">
+    <personalCurrentYear name="personalCurrentYear" integerValue="2019"/>
+    <personalBirthDay name="personalBirthDay" integerValue="6"/>
+    <personalBirthMonth name="personalBirthMonth" integerValue="9"/>
+    <personalBirthYear name="personalBirthYear" integerValue="1958"/>
+    <personalRetirementAge name="personalRetirementAge" integerValue="59"/>
+    <personalDeathAge name="personalDeathAge" integerValue="95"/>
+    <personalInflation name="personalInflation" doubleValue="0.03"/>
+  </Personal>
+
+  <Salary name="Salary">
+    <salaryAnnualSalary name="salaryAnnualSalary" doubleValue="50000.0"/>
+    <salaryMeritIncrease name="salaryMeritIncrease" doubleValue="0.025"/>
+  </Salary>
+
+  <Savings name="Savings">
+    <savingsStartingBalance name="savingsStartingBalance" doubleValue="24000.0"/>
+    <savingsGrowthRate name="savingsGrowthRate" doubleValue="0.04"/>
+  </Savings>
+
+  <SocialSecurity name="SocialSecurity">
+    <socialSecurityStartAge name="socialSecurityStartAge" integerValue="70"/>
+    <socialSecurityMonthlyAmount name="socialSecurityMonthlyAmount" doubleValue="2900.0"/>
+  </SocialSecurity>
+
+  <Taxes name="Taxes">
+    <taxRateFederal name="taxRateFederal" doubleValue="0.14"/>
+    <taxRateState name="taxRateState" doubleValue="0.04"/>
+  </Taxes>
+</TopLevel>

@@ -1,0 +1,52 @@
+#
+# Move to input Savings tab
+#
+mouseMoved inputSavingsTab
+#
+# Click on tab
+#
+mouseClicked 1
+#
+# Move to output Savings tab
+#
+mouseMoved outputSavingsTab
+#
+# Click on tab
+#
+mouseClicked 1
+#
+# Screen Capture
+#
+captureFile   happyCase/inputsSavings
+screenCapture captureInputEntries
+#
+# Delay some time to allow system to write the file
+#
+delay captureWait
+#
+# Screen Capture
+#
+captureFile   happyCase/outputsSavings
+screenCapture captureOutputTextArea
+#
+# Delay some time to allow system to write the file
+#
+delay captureWait
+#
+# Move to an empty area below the output scroll bar
+#
+mouseMoved outputScrollBarEmptyArea
+#
+# Click on tab
+#
+mouseClicked 1
+#
+# Screen Capture
+#
+captureFile   happyCase/outputsSavings2
+screenCapture captureOutputTextArea
+#
+# Delay some time to allow system to write the file
+#
+delay captureWait
+

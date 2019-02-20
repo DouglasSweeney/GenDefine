@@ -1,0 +1,2 @@
+1) Need -d?
+    Its in the script file tho.

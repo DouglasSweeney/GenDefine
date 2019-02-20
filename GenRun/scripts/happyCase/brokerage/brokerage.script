@@ -1,0 +1,55 @@
+#
+# Move to input brokerage tab
+#
+mouseMoved inputBrokerageTab
+#
+# Click on tab
+#
+mouseClicked 1
+delay 50
+#
+# Move to output brokerage tab
+#
+mouseMoved outputBrokerageTab
+#
+# Click on tab
+#
+mouseClicked 1
+delay 50
+#
+# Screen Capture
+#
+captureFile   happyCase/inputsBrokerage
+screenCapture captureInputEntries
+#
+# Delay some time to allow system to write the file
+#
+delay captureWait
+#
+# Screen Capture
+#
+captureFile   happyCase/outputsBrokerage
+screenCapture captureOutputTextArea
+#
+# Delay some time to allow system to write the file
+#
+delay captureWait
+#
+# Move to scroll bar down
+#
+mouseMoved outputScrollBarEmptyArea
+#
+# Click on tab
+#
+mouseClicked 1
+delay 50
+#
+# Screen Capture
+#
+captureFile   happyCase/outputsBrokerage2
+screenCapture captureOutputTextArea
+#
+# Delay some time to allow system to write the file
+#
+delay captureWait
+

@@ -1,0 +1,25 @@
+#
+# Testing
+#
+run java -jar MyRetirement.jar
+autoWaitForIdle false
+autoWaitForIdle asdfasdf
+autoWaitForIdle true
+setAutoDelay
+#setAutoDelay a - Tested
+setAutoDelay 50
+#setAutoDelay 50 adfgadf
+#
+# Include some settings
+#
+source settings.script
+#
+# Move to input Deductions, change the deduction & capture a screenshot
+#
+source changeDeductions.script
+#
+# Test 
+#
+mouseMoved 60 60
+mouseWheel 1
+run java -jar MyRetirement.jar

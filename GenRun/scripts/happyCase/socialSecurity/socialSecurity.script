@@ -1,0 +1,52 @@
+#
+# Move to input social security tab
+#
+mouseMoved inputSocialSecurityTab
+#
+# Click on tab
+#
+mouseClicked 1
+#
+# Move to output social Security tab
+#
+mouseMoved outputSocialSecurityTab
+#
+# Click on tab
+#
+mouseClicked 1
+#
+# Screen Capture
+#
+captureFile   happyCase/inputsSocialSecurity
+screenCapture captureInputEntries
+#
+# Delay some time to allow system to write the file
+#
+delay captureWait
+#
+# Screen Capture
+#
+captureFile   happyCase/outputsSocialSecurity
+screenCapture captureOutputTextArea
+#
+# Delay some time to allow system to write the file
+#
+delay captureWait
+#
+# Move to an empty area below the output scroll bar
+#
+mouseMoved outputScrollBarEmptyArea
+#
+# Click on tab
+#
+mouseClicked 1
+#
+# Screen Capture
+#
+captureFile   happyCase/outputsSocialSecurity2
+screenCapture captureOutputTextArea
+#
+# Delay some time to allow system to write the file
+#
+delay captureWait
+

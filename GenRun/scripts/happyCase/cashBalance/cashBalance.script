@@ -1,0 +1,55 @@
+#
+# Move to input cashBalance tab
+#
+mouseMoved inputCashBalanceTab
+#
+# Click on tab
+#
+mouseClicked 1
+delay 50
+#
+# Move to output cashBalance tab
+#
+mouseMoved outputCashBalanceTab
+#
+# Click on tab
+#
+mouseClicked 1
+delay 50
+#
+# Screen Capture
+#
+captureFile   happyCase/inputsCashBalance
+screenCapture captureInputEntries
+#
+# Delay some time to allow system to write the file
+#
+delay captureWait
+#
+# Screen Capture
+#
+captureFile   happyCase/outputsCashBalance
+screenCapture captureOutputTextArea
+#
+# Delay some time to allow system to write the file
+#
+delay captureWait
+#
+# Move to scroll bar down
+#
+mouseMoved outputScrollBarEmptyArea
+#
+# Click on tab
+#
+mouseClicked 1
+delay 50
+#
+# Screen Capture
+#
+captureFile   happyCase/outputsCashBalance2
+screenCapture captureOutputTextArea
+#
+# Delay some time to allow system to write the file
+#
+delay captureWait
+

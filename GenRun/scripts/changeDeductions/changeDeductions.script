@@ -1,0 +1,60 @@
+#
+# Move to Deductions tab
+#
+mouseMoved inputsDeductionsTab
+#
+# Click on deductions tab
+#
+mouseClicked 1
+#
+# mouseMoved inputsCurrentDeductionsField
+#
+mouseMoved inputsCurrentDeductionsField
+#
+# Click on Current Deductions field
+#
+mouseClicked 1
+#
+# Depress the right arrow
+#
+keyPressed 39
+keyReleased 39
+#
+# Depress the right arrow
+#
+keyPressed 39
+keyReleased 39
+#
+# Depress the Backspace key
+#
+keyPressed 8
+keyReleased 8
+#
+# Depress the Backspace key
+#
+keyPressed 8
+keyReleased 8
+#
+# Move to Calculate button
+#
+mouseMoved calculateButton
+#
+# Click on the Calculate button
+#
+mouseClicked 1
+delay 3000
+#
+# Moved to results Deductions tab
+#
+mouseMoved outputsDeductionsTab
+#
+# Clicked on outputs Deductions tab
+#
+mouseClicked 1
+delay 1000
+#
+# Screen Capture
+#
+captureFile   changeDeductions
+screenCapture captureAreaChangeDeductions
+delay 1000

@@ -1,0 +1,5 @@
+define inputsDeductionsTab 375 355
+define inputsCurrentDeductionsField 410 463
+define calculateButton 578 398
+define outputsDeductionsTab 920 188
+define captureAreaChangeDeductions 69 27 1290 735

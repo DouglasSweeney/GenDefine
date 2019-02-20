@@ -1,0 +1,52 @@
+#
+# Move to input Salary tab
+#
+mouseMoved inputSalaryTab
+#
+# Click on tab
+#
+mouseClicked 1
+#
+# Move to output Salary tab
+#
+mouseMoved outputSalaryTab
+#
+# Click on tab
+#
+mouseClicked 1
+#
+# Screen Capture
+#
+captureFile   happyCase/inputsSalary
+screenCapture captureInputEntries
+#
+# Delay some time to allow system to write the file
+#
+delay captureWait
+#
+# Screen Capture
+#
+captureFile   happyCase/outputsSalary
+screenCapture captureOutputTextArea
+#
+# Delay some time to allow system to write the file
+#
+delay captureWait
+#
+# Move to an empty area below the output scroll bar
+#
+mouseMoved outputScrollBarEmptyArea
+#
+# Click on tab
+#
+mouseClicked 1
+#
+# Screen Capture
+#
+captureFile   happyCase/outputsSalary2
+screenCapture captureOutputTextArea
+#
+# Delay some time to allow system to write the file
+#
+delay captureWait
+
