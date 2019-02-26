@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="trace">
+  <appenders>
+    <File name="TRACE_FILE" fileName="logs/log4j2/trace.log" append="false">
+      <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %p [%C:%L] - %m%n"/>
+    </File>
+    <File name="ERROR_FILE" fileName="logs/log4j2/error.log" append="false">
+      <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %p [%C:%L] - %m%n"/>
+    </File>
+    <Console name="APPENDER_OUT" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %p [%C:%L] - %m%n"/>
+    </Console>
+  </appenders>
+  <loggers>
+    <Logger name="system" level="TRACE">
+      <appender-ref ref="TRACE_FILE" level="trace"/>
+      <appender-ref ref="SYSTEM_OUT" level="trace"/>
+    </Logger> 
+    <root level="trace">
+      <appender-ref ref="ERROR_FILE" level="error"/>
+      <appender-ref ref="TRACE_FILE" level="trace"/>
+      <appender-ref ref="SYSTEM_OUT" level="trace"/>
+    </root>
+  </loggers>
+</configuration>
+

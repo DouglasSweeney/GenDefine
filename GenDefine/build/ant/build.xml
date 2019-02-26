@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="GenDefine" basedir="/home/doug/workspace/GenDefine">
+
+	<property name="base.dir" value="/home/doug/workspace/GenDefine" />
+	<property name="src.dir" value="src" />
+    <property name="lib.dir" value="lib" />
+    <property name="build.dir" value="build" />
+	
+    <property name="junitlib.dir" value="lib/junit" />
+	<property name="cobertura.dir" value="lib/cobertura/cobertura-2.1.1/lib" />
+    <property name="getopt.dir" value="lib/getopt" />
+	
+	<property name="instrumented.dir" value="build/cobertura/instrumented" />
+	<property name="classes.dir" value="build/classes" />
+	
+	<property name="reports.xml.dir" value="reports/cobertura/xml" />
+	<property name="reports.html.dir" value="reports/cobertura/html" />
+	
+    <property name="jar.dir" value="." />
+	
+    <property name="main-class" value="main.java.Main" />
+	
+    <path id="cobertura.classpath">
+    	<fileset dir="${cobertura.dir}">
+        	<include name="cobertura*.jar" />
+        	<include name="*.jar" />
+    	</fileset>
+    </path>
+    
+    <taskdef classpathref="cobertura.classpath" resource="tasks.properties" />
+
+    <path id="classpath">
+        <fileset dir="${lib.dir}" includes="**/*.jar" />
+    </path>
+
+    <target name="clean" description="Delete all generated files">
+	    <delete dir="${instrumented.dir}"      failonerror="false"/>
+	    <delete dir="${reports.xml.dir}"       failonerror="false" />
+	    <delete dir="${reports.html.dir}"      failonerror="false" />
+ 	    <delete file="cobertura.ser"           failonerror="false" />
+ 	    <delete file="cobertura.log"           failonerror="false" />
+        <delete dir="${classes.dir}"           failonerror="false" />
+        <delete file="${ant.project.name}.jar" failonerror="false" />
+    </target>
+
+    <target name="compile" description="Compiles the source files" depends="clean">
+        <mkdir dir="${classes.dir}"/>
+        <javac destdir="${classes.dir}" debug="true" includeantruntime="true">
+	        <src path="${src.dir}"/>
+            <include name="**/*.java" />
+	        <exclude name="**/*Test.java" />
+	        <classpath>
+      	        <fileset dir="${lib.dir}">
+        	       <include name="**/*.jar"/>
+                   <include name="**/*.properties"/>
+      		    </fileset>
+                <pathelement path="${classes.dir}"/>
+	        </classpath>
+	        <compilerarg value="-Xlint:unchecked" />
+	    </javac> 
+        <copy todir="${classes.dir}">
+          <fileset dir="${getopt.dir}">
+            <include name="**/*.properties"/>
+          </fileset>
+        </copy>
+    </target>
+
+   <target name="test-compile" description="Compiles the test source files">
+       <mkdir dir="${instrumented.dir}"/>
+       <javac destdir="${instrumented.dir}" debug="true" includeantruntime="true">
+	       <src path="${src.dir}"/>
+           <include name="**/*Test.java" />
+	       <classpath>
+      		  <fileset dir="${lib.dir}">
+        	      <include name="**/*.jar"/>
+      		  </fileset>
+              	  <pathelement path="${instrumented.dir}"/>
+	       </classpath>
+	       <compilerarg value="-Xlint:unchecked" />
+        </javac> 
+   </target>
+
+   <target name="jar" description="JARs the project source files" depends="compile">
+     <jar destfile="${ant.project.name}.jar">
+        <fileset dir="${base.dir}">
+          <include name="resources/**/*.properties"/>
+        </fileset>
+        <fileset dir="${classes.dir}"/>
+        <restrict>
+            <name name="**/*.class"/>
+            <archives>
+               <zips>
+                     <fileset dir="${junitlib.dir}" includes="**/*.jar"/>
+                     <fileset dir="${cobertura.dir}" includes="**/*.jar"/>
+                     <fileset dir="${getopt.dir}" includes="**/*.jar" />
+                </zips>
+            </archives>
+        </restrict>
+         <manifest>
+         	<attribute name="Main-Class" value="${main-class}"/>
+         </manifest>
+      </jar>
+   </target>
+	
+    <target name="run" depends="jar" description="Run the jar file.">
+        <java classname="${main-class}" fork="true" >
+            <classpath>
+                <path refid="classpath" />
+                <path location="${jar.dir}/${ant.project.name}.jar" />
+            </classpath>
+            <arg value="-s" />
+            <arg value="scripts" />
+            <arg value="-c" />
+            <arg value="capture/actual" />
+            <arg value="--sut" />
+            <arg value="GenDefine.jar" />
+            <arg value="--run" />
+            <arg value="java -jar" />
+            <arg value="scripts/settings.script" />
+        </java>
+    </target>
+
+   <target name="instrument" description="Create instrumented class files for the line coverage" depends="compile">
+        <mkdir dir="${instrumented.dir}"/>
+        <cobertura-instrument todir="${instrumented.dir}" ignoreTrivial="true">
+            <ignore regex="org.slf4j.LoggerFactory.*" />
+            <ignore regex="org.apache.log4j.*" />
+            <ignoreMethodAnnotation annotationName="main.java.model.SettingsList.print" />
+            <ignoreMethodAnnotation annotationName="main.java.model.SettingsList.main" />
+            <ignoreMethodAnnotation annotationName="main.java.model.RobotObject.main" />
+            <includeclasses regex=".*" />
+            <excludeclasses regex=".*\.Test.*" />
+            <instrumentationClasspath>
+                <pathelement location="${classes.dir}" />
+            </instrumentationClasspath>
+         </cobertura-instrument> 
+   </target>
+	
+   <target name="test" description="Verify the system." depends="compile,test-compile,instrument">
+	<mkdir dir="${reports.xml.dir}"/>
+ 	<junit fork="yes" forkmode="once" dir="${base.dir}" failureProperty="test.failed" printsummary="true">
+    	<!--
+        	Specify the name of the coverage data file to use.
+        	The value specified below is the default.
+	    -->	    
+    	<sysproperty key="net.sourceforge.cobertura.datafile"
+        	file="${base.dir}/cobertura.ser" />
+		
+	    <!--
+    	    Note the classpath order: instrumented classes are before the
+        	original (uninstrumented) classes.  This is important.
+	    -->
+    	<classpath location="${instrumented.dir}" />
+    	<classpath location="${classes.dir}" />
+
+	    <!--
+    	    The instrumented classes reference classes used by the
+        	Cobertura runtime, so Cobertura and its dependencies
+        	must be on your classpath.
+	    -->
+    	<classpath refid="cobertura.classpath" />
+	    <classpath location="${junitlib.dir}/junit-4.11.jar" />
+	    <classpath location="${junitlib.dir}/hamcrest-core-1.3.jar" />
+        <classpath location="${getopt.dir}/java-getopt-1.0.14.jar" />
+       
+
+	    <formatter type="xml" />
+    	<test name="${testcase}" todir="${reports.xml.dir}" if="testcase" />
+    	<batchtest todir="${reports.xml.dir}" unless="testcase">
+        	<fileset dir="${src.dir}">
+            	<include name="**/*Test.java" />
+        	</fileset>
+    	</batchtest>
+	</junit>
+    </target>
+
+    <target name="coverage-report" description="Create the index.html line coverage report.">
+	<mkdir dir="${reports.html.dir}"/>
+	<cobertura-report format="html" destdir="${reports.html.dir}">
+             <fileset dir="${src.dir}" casesensitive="yes">
+                <include name="**/*.java" />
+                <exclude name="**/*Stub.java" />
+             </fileset>
+  	</cobertura-report>
+   </target>
+ 	
+   <target name="coverage-check" description="Set some parameters for red or green color">
+	<cobertura-check branchrate="34" totallinerate="100" />
+   </target>
+</project>

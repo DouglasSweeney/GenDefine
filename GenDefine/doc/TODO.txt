@@ -1,0 +1,3 @@
+Sort defines on main screen (in JComboBox)
+
+1) Add GUI testing 

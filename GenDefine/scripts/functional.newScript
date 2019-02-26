@@ -1,0 +1,3 @@
+define capture 0 1 1366 768
+define tab 50 50
+define wait 2000

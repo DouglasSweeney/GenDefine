@@ -1,0 +1,17 @@
+define captureInputEntries 192 256 384 320
+define captureOutputTextArea 592 160 656 528
+define captureWait 1500
+define input401kTab 237 372
+define input403bTab 306 366
+define inputBrokerageTab 377 373
+define inputCashBalanceTab 507 372
+define inputDeductionsTab 284 353
+define menuFile 90 60
+define menuFileExit 93 81
+define output401kTab 612 205
+define output403bTab 675 202
+define outputBrokerageTab 739 204
+define outputCashBalanceTab 850 203
+define outputDeductionsTab 965 199
+define outputScrollBarDownArrow 1222 619
+define outputScrollBarEmptyArea 1219 550
